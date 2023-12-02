@@ -1,4 +1,4 @@
-module aoc2023.day1
+module aoc_2023.day1
 
 open System.IO
 open FParsec
@@ -52,8 +52,6 @@ let parseFirstDigit digitMap line =
     |> Seq.head
     |> Option.get
 
-
-
 let parsePartTwoLine line =
     let reverseLine = reverseString line
 
@@ -64,8 +62,6 @@ let parsePartTwoLine line =
         |]
         |> (fun x -> new string(x))
         |> System.Int64.Parse
-
-    printfn $"src: %s{line}: result: %i{result}"
 
     result
 
